@@ -1,4 +1,4 @@
-<?php // create.php
+<?php
 session_start(); // Starting Session
 
 include 'classes/sqlCalls.php';

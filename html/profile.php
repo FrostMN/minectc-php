@@ -1,4 +1,4 @@
-<?php //profile.php
+<?php
 include('session.php');
 
 if(isset($_SESSION['login_user'])){
