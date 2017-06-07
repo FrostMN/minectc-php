@@ -7,10 +7,155 @@ CSS Settings For HTML Div ExactCenter
     padding: 0; 
 }
 
+/*html {
+    margin: 0;
+    padding: 0;
+}*/
+
+.main-div {
+    position: absolute;
+    top: 35px; /* Header Height */
+    bottom: 0%; /* Footer Height */
+    left: 5%;
+    right: 5%;
+    /*height: 400px;*/
+    /*background:#F0F0F0;
+    border: 2px solid #CCC;*/
+    width:90%;
+    min-width: 550px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    text-align: left;
+}
+
+.nav-div {
+    float: left;
+    height: 500px;
+    background:#F0F0F0;
+    border: 2px solid #CCC;
+    width: 200px;
+    margin-right: 40px;
+    text-align: left;
+}
+
+.nav-div a {
+    text-decoration: none;
+}
+
+.nav-btn {
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+}
+
+.nav-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-btn a:hover {
+    background-color: #3e8e41
+}
+
+.map-div {
+    position: absolute;
+    left: 220px;
+    top: 0%;
+    bottom: 100px;
+    right: 0%;
+    /*height: 70%;*/
+    min-height: 300px;
+    /*width: 600px;*/
+    min-width: 300px;
+    float: left;
+}
+
+
+/*
+.content-div {
+    height: 99%;
+    background: blue;
+    border: 2px solid #CCC;
+    width:20%;
+    min-width: 100px;
+    margin-right: 40px;
+    text-align: left;
+}
+*/
+
+.content-header {
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    border-bottom: 2px solid #CCC;
+    height: 100px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+.content-body {
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    top: 125px;
+    bottom: 0%;
+    padding: 25px;
+}
+
+.download-div-main {
+    position: absolute;
+    right: 0%;
+    left: 220px;
+    background:#F0F0F0;
+    border: 2px solid #CCC;
+    /*width: 70%;*/
+    min-width: 800px;
+    /*margin-right: 40px;*/
+    text-align: left;
+    padding: 25px;
+}
+
+
+.download-div {
+    height: 75px;
+    width: 800px;
+    border: 2px solid #CCC;
+}
+
+.download-div-info {
+    float: right;
+    height: 50px;
+    width: 500px;
+    border: 1px solid #CCC;
+}
+
+
+.download-div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #CCC;
+}
+
+ul {
+    padding-left: 2em;
+}
+
+ol {
+    padding-left: 1em;
+}
+
+.to-do {
+    width:960px;
+    margin:50px auto;
+    font-family:raleway
+}
+
 #main {
-width:960px;
-margin:50px auto;
-font-family:raleway
+    width:960px;
+    margin:50px auto;
+    font-family:raleway
 }
 
 div.page_header {
@@ -19,9 +164,40 @@ div.page_header {
     border-bottom: 2px solid #CCC;
     width:100%;
     margin:0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     /*padding-top: 5px;*/
     text-align: right;
+}
+
+.rules-div {
+    /*float: right;*/
+    position: absolute;
+    right: 0%;
+    left: 220px;
+    /*height: 99%;*/
+    background:#F0F0F0;
+    border: 2px solid #CCC;
+    /*width: 70%;*/
+    min-width: 600px;
+    /*margin-right: 40px;*/
+    text-align: left;
+    padding: 25px;
+}
+
+.home-div {
+    /*float: right;*/
+    position: absolute;
+    right: 0%;
+    left: 220px;
+    /*height: 99%;*/
+    background:#F0F0F0;
+    border: 2px solid #CCC;
+    /*width: 70%;*/
+    min-width: 600px;
+    min-height: 400px;
+    /*margin-right: 40px;*/
+    text-align: left;
+    /*padding: 25px;*/
 }
 
 span.error {
@@ -50,6 +226,7 @@ border:2px solid #ccc;
 padding:10px 40px 25px;
 margin-top:70px
 }
+
 input[type=text],input[type=password] {
 width:99.5%;
 padding:10px;
@@ -59,6 +236,7 @@ padding-left:5px;
 font-size:16px;
 font-family:raleway
 }
+
 input[type=submit] {
 width:100%;
 background-color:#FFBC00;
@@ -70,17 +248,20 @@ cursor:pointer;
 border-radius:5px;
 margin-bottom:15px
 }
+
 #profile {
 padding:50px;
 border:1px dashed grey;
 font-size:20px;
 background-color:#DCE6F7
 }
+
 #logout {
 float:right;
 padding:5px;
 border:dashed 1px gray
 }
+
 a {
 text-decoration:none;
 color:#6495ed
@@ -89,14 +270,13 @@ i {
 color:#6495ed
 }
 
-
-
 .dropbtn {
     background-color: #4CAF50;
     color: white;
     padding-left: 8px;
     padding-right: 16px;
-    /*height: 25px;*/
+    /*height: 2px;*/
+    padding-top: 2px;
     padding-bottom: 5px;
     /*height: 100%;*/
     font-size: 16px;
@@ -122,6 +302,7 @@ color:#6495ed
     padding-left: 8px;
     padding-right: 16px;
     /*height: 25px;*/
+    padding-top: 2px;
     padding-bottom: 5px;
     /*height: 100%;*/
     font-size: 16px;
