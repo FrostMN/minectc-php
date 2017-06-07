@@ -12,7 +12,7 @@ switch ($current_section) {
         include ('blocks/home/main/home-div.php');
         break;
     case "map":
-        include ('blocks/map-div.php');
+        include ('blocks/home/map/map-div.php');
         break;
     case "download":
         include ('blocks/home/download/download-div.php');
