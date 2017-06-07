@@ -13,7 +13,7 @@ with open(DB_FILE) as line:
     db_creds = line.read().splitlines()
 DB_USER = db_creds[0].split(" ")[1]
 DB_PWRD = db_creds[1].split(" ")[1]
-DB_NAME = "minectc"
+DB_NAME = "minectc_test"
 
 #Quary for recreating database
 db_qry = """
@@ -24,22 +24,28 @@ USE `%s`;
 GRANT ALL PRIVILEGES ON `%s`.* TO 'minectcuser'@'localhost';
 
 CREATE TABLE players (
-    UsrID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    mcName varchar(16) UNIQUE,
-    claimed tinyint(1) NOT NULL DEFAULT 0,
-    webName varchar(25) UNIQUE,
-    admin tinyint(1) NOT NULL DEFAULT 0,
-    email varchar(250),
-    email_verified tinyint(1) NOT NULL DEFAULT 0,
-    email_nonce varchar(16),
-    first_name varchar(250),
-    last_name varchar(250),
-    salt varchar(64),
-    pword_hash varchar(64),
-    hash_iter bigint default 1
+    UsrID         int           NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    mcName        varchar(16)   UNIQUE NOT NULL,
+    email         varchar(100)  UNIQUE,
+    nonce   varchar(25)   DEFAULT NULL,
+    time          datetime      DEFAULT NULL
+);
+
+CREATE TABLE users (
+    UsrID       int            NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    mcName      varchar(16)    UNIQUE NOT NULL,
+    webName     varchar(25)    UNIQUE NOT NULL,
+    admin       tinyint(1)     NOT NULL DEFAULT 0,
+    first_name  varchar(30)    NOT NULL,
+    last_name   varchar(30)    NOT NULL,
+    email       varchar(100)   UNIQUE NOT NULL,
+    salt        varchar(64)    NOT NULL,
+    hash  varchar(64)    NOT NULL
 );
 
 """ % (DB_NAME, DB_NAME, DB_NAME, DB_NAME)
+
+
 #Uncomment to echo quary as sent
 #print(db_qry)
 
@@ -53,4 +59,3 @@ cur.close()
 
 conn.commit()
 conn.close()
-
